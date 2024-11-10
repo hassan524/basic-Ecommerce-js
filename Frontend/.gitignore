@@ -1,3 +1,2 @@
 # hide node modules 
-node_modules/
-ls
+node_modules
