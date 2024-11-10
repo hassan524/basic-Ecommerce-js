@@ -1,0 +1,79 @@
+@media only screen and (max-width: 768px) {
+  .form {
+    width: 100%;
+    height: 68%;
+  }
+  .main-form .form-group{
+    border-bottom: 1px solid var( --main-color); 
+  
+  }
+  
+  .form-option {
+    width: 100%;
+    background: #fff;
+  }
+  .form-option h2 {
+    display: none;
+  }
+  .form-option span {
+    color: var(--main-color);
+
+  }
+  .login-option,
+  .signup-option {
+    position: relative;
+    top: 30px;
+  }
+  .btnn {
+    color: var(--main-color);
+    top: -20px;
+  }
+  .main-form {
+    padding: 2rem 0.5rem;
+  }
+  .main-btn {
+    height: 7vh;
+  }
+}
+@media only screen and (max-width: 968px) {
+  .form-card {
+    width: 85vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main-form .form-group input {
+    letter-spacing: 0.5px;
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .form-option h2 {
+    font-size: 2rem;
+  }
+  .form-option span {
+    font-size: 1.2rem;
+    position: relative;
+    top: -12px;
+  }
+  .btnn {
+    height: 5vh;
+  }
+}
+@media only screen and (max-width: 475px) {
+  .form-option h2 {
+    font-size: 1.5rem;
+  }
+  .form-option span {
+    font-size: 1.3rem; 
+    position: relative;
+    top: -14px;
+  }
+  .btnn {
+    width: 8rem;
+  }
+  .main-btn {
+    font-size: 1.3rem; 
+    height: 6.5vh;
+    width: 95%;
+  }
+}

@@ -1,0 +1,2450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECommerce</title>
+
+    <!-- links  -->
+
+    <link rel="stylesheet" href="./src/output.css">
+
+    <link rel="stylesheet" href="./src/input.css">
+
+    <link rel="stylesheet" href="../Css/others.css">
+
+    <link rel="stylesheet" href="./src/style.css">
+
+    <link rel="stylesheet" href="./src/aos/dist/aos.css">
+
+    <!--  Cdn/  -->
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- /  -->
+
+</head>
+
+<body>
+
+    <!-- =================== ECOMMERCE WEBSITE =================== -->
+
+    <!-- ========== Header Side Start ==========  -->
+    <header class="bg-slate-50 h-[13vh] flex items-center md:px-8 pe-5">
+        <nav class="w-full flex justify-between items-center">
+            <div class="w-[120px] cursor-pointer">
+                <img src="../Images/logo.png" alt="">
+            </div>
+            <div id="menu"
+                class="md:block z-50 hidden md:relative fixed inset-0 bg-white md:bg-transparent w-2/4 md:w-auto md:p-0 p-8 h-screen md:h-auto">
+                <ul class="flex md:flex-row flex-col gap-[2rem]">
+                    <li class="flex justify-between">
+                        <a class="active-link cursor-pointer text-xl" href="">Home</a>
+                        <i class="rem-nav md:hidden block bi bi-x-square-fill text-green-900 md:text-3xl text-2xl cursor-pointer"></i>
+                    </li>
+                    <li><a class="cursor-pointer text-xl" href="#product">Product</a></li>
+                    <li><a class="cursor-pointer text-xl" href="#about">About</a></li>
+                    <!-- <li><a class="cursor-pointer text-xl" href=".services">Services</a></li>  -->
+                    <a href="#cart">
+                        <i class="bi bi-cart4 text-3xl cursor-pointer relative top-[-5px]"></i>
+                    </a>
+
+                </ul>
+            </div>
+            <div class="toggle md:hidden block cursor-pointer">
+                <i class="bi bi-list text-5xl"></i>
+            </div>
+
+        </nav>
+    </header>
+    <!-- ========== Header Side Complete ==========  -->
+
+    <!-- ========== Hero Side Start ==========  -->
+    <main class="bg-slate-100 min-h-[calc(100vh-13vh)]">
+        <div class="flex lg:flex-row flex-col min-h-[calc(100vh-13vh)]">
+
+            <div class="lg:w-1/2 w-full lg:py-0 py-20 flex lg:items-center items-start justify-start">
+                <div class="flex lg:text-start text-center flex-col gap-[1rem] ps-6 pe-6 lg:ps-12 lg:pe-8">
+                    <div class="">
+                        <h1
+                            class="welc lg:text-[45px] leading-10 sm:text-[40px] text-[30px] font-semibold, text-gray-800 dark:text-white">
+                            <span class="name"></span>
+                        </h1>
+                    </div>
+                    <p class="lg:text-[18px] text-gray-500 sm:leading-9 leading-[30px]">
+                        Welcome to EStore! This is a template for an eCommerce site, and one of my projects where users
+                        can buy, sell, and upload products with amazing features. This is only the frontend design of an
+                        eCommerce site named "EStore," built entirely with JavaScript and Tailwind CSS, including a
+                        login and signup page made with JavaScript. I hope you will like it! Go ahead and explore the
+                        great features of this site.</p>
+                </div>
+            </div>
+            <div
+                class="lg:w-1/2 w-full flex lg:items-center items-start lg:justify-end justify-center  lg:ps-12 lg:pe-8">
+                <div class="w-[30rem] md:px-0 px-2">
+                    <img src="../Images/hero-image.png" alt="" class="w-full h-auto">
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- ========== Hero Side Complete ==========  -->
+    <!-- ========== Product option Section Side ==========  -->
+
+    <section id="product" class="bg-slate-100 pt-[5rem] relative z-0">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 ps-6 pe-6 lg:ps-12 lg:pe-8 gap-8">
+            <!-- box1  -->
+            <div class="cursor-pointer min-h-[18vh] bg-slate-200 py-6 px-[1.1rem] flex flex-col items-center justify-between rounded-[33px] gap-[1rem]"
+                data-aos="fade-up" data-aos-delay="0">
+                <div id="product-image" class="h-full flex items-center">
+                    <img class="rounded-3xl" src="../Images/product-categories-option/pp2.jpg" alt="">
+                </div>
+                <div class="w-full flex flex-col gap-[1rem]">
+                    <div class="flex">
+                        <h3 id="option-name" class="text-gray-500 text-[23px] italic"></h3>
+                    </div>
+                    <p class="text-gray-500">
+                        "House Accessories" – Discover a wide range of decor essentials, from stylish lamps and cozy
+                        throw pillows to elegant wall art, candles, and more. Find the perfect pieces to make your home
+                        warm and inviting!
+                    </p>
+                    <button id="home-products" class="btn bg-slate-400 py-[0.5rem] text-white rounded-3xl">
+                        <span>View Items</span>
+                    </button>
+                </div>
+            </div>
+            <!-- box2  -->
+            <div class="cursor-pointer min-h-[18vh] bg-slate-200 py-6 px-[1.1rem] flex flex-col items-center justify-between rounded-[33px] gap-[1rem]"
+                data-aos="fade-up" data-aos-delay="100">
+                <div id="product-image" class="h-full flex items-center">
+                    <img class="rounded-3xl" src="../Images/product-categories-option/pp1.jpg" alt="">
+                </div>
+                <div class="w-full flex flex-col gap-[1rem]">
+                    <div class="flex">
+                        <h3 id="option-name" class="text-gray-500 text-[23px] italic"></h3>
+                    </div>
+                    <p class="text-gray-500">
+                        "Clothing & Apparel" – Browse our selection of clothes for every style and
+                        occasion. From casual outfits and comfy loungewear to stylish accessories, find everything you
+                        need to look and feel your best!
+                    </p>
+                    <button id="Clothing" class="btn bg-slate-400 py-[0.5rem] text-white rounded-3xl">
+                        <span>View Items</span>
+                    </button>
+                </div>
+            </div>
+            <!-- box3  -->
+            <div class="cursor-pointer min-h-[18vh] bg-slate-200 py-6 px-[1.1rem] flex flex-col items-center justify-between rounded-[33px] gap-[1rem]"
+                data-aos="fade-up" data-aos-delay="200">
+                <div id="product-image" class="h-full flex items-center">
+                    <img class="rounded-3xl" src="../Images/product-categories-option/pp3.jpg" alt="">
+                </div>
+                <div class="w-full flex flex-col gap-[1rem]">
+                    <div class="flex">
+                        <h3 id="option-name" class="text-gray-500 text-[23px] italic"></h3>
+                    </div>
+                    <p class="text-gray-500">
+                        "Mobiles & Accessories" – Explore the latest smartphones and a wide range of accessories, from
+                        cases and screen protectors to chargers and earbuds. Find everything you need to stay connected
+                        and enhance your mobile experience!
+                    </p>
+                    <button id="Mobiles" class="btn bg-slate-400 py-[0.5rem] text-white rounded-3xl">
+                        <span>View Items</span>
+                    </button>
+                </div>
+            </div>
+            <!-- box4  -->
+            <div class="cursor-pointermin-h-[18vh] bg-slate-200 py-6 px-[1.1rem] flex flex-col items-center justify-between rounded-[33px] gap-[1rem]"
+                data-aos="fade-up" data-aos-delay="200">
+                <div id="product-image">
+                    <img class="h-[251px] rounded-3xl" src="../Images/product-categories-option/pp4.jpg" alt="">
+                </div>
+                <div class="w-full flex flex-col gap-[1rem]">
+                    <div class="flex">
+                        <h3 id="option-name" class="text-gray-500 text-[23px] italic"></h3>
+                    </div>
+                    <p class="text-gray-500">"Furniture & Living" – Furnish your home with quality pieces that bring
+                        comfort and style. Explore our selection of beds, sofas, dining tables, wardrobes, and more to
+                        create the perfect space for every room in your home!
+                    </p>
+                    <button id="Furniture" class=" btn bg-slate-400 py-[0.5rem] text-white rounded-3xl">
+                        <span>View Items</span>
+                    </button>
+                </div>
+            </div>
+            <!-- box5  -->
+            <div class="cursor-pointer min-h-[18vh] bg-slate-200 py-6 px-[1.1rem] flex flex-col items-center justify-between rounded-[33px] gap-[1rem]"
+                data-aos="fade-up" data-aos-delay="100">
+                <div id="product-image">
+                    <img class="rounded-3xl" src="../Images/product-categories-option/pp6.jpg" alt="">
+                </div>
+                <div class="w-full flex flex-col gap-[1rem]">
+                    <div class="flex">
+                        <h3 id="option-name" class="text-gray-500 text-[23px] italic"></h3>
+                    </div>
+                    <p class="text-gray-500">
+                        "Gaming Zone" – Dive into the ultimate gaming experience with top consoles
+                        like PS4, Xbox, and Nintendo, alongside a vast collection of games, controllers, and
+                        accessories. Gear up for endless entertainment and bring your gaming setup to the next level!
+
+
+                    </p>
+                    <button id="Laptops" class="btn bg-slate-400 py-[0.5rem] text-white rounded-3xl">
+                        <span>View Items</span>
+                    </button>
+                </div>
+            </div>
+            <!-- box6 -->
+            <div class="cursor-pointer min-h-[18vh] bg-slate-200 py-6 px-[1.1rem] flex flex-col items-center justify-between rounded-[33px] gap-[1rem]"
+                data-aos="fade-up" data-aos-delay="0">
+                <div id="product-image" class="rounded-full">
+                    <img class="rounded-3xl" src="../Images/product-categories-option/pp5.jpg" alt="">
+                </div>
+                <div class="w-full flex flex-col gap-[1rem]">
+                    <div class="flex">
+                        <h3 id="option-name" class="text-gray-500 text-[23px] italic"></h3>
+                    </div>
+                    <p class="text-gray-500">
+                        "Laptops & Computers" – Discover the latest in portable computing, from
+                        powerful laptops and sleek MacBooks to essential accessories. Find the right device to match
+                        your productivity needs and boost your creativity on the go!
+                    </p>
+                    <button id="Gaming" class="btn bg-slate-400 py-[0.5rem] text-white rounded-3xl">
+                        <span>View Items</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Products Of "House Accessories"  -->
+    <main
+        class="flex-col gap-[2rem] home-products overflow-scroll scroll-wi main p-4 hidden z-50 left-1/2 top-1/2 w-[100vw] h-[100vh] bg-slate-200 rounded-2xl transform -translate-x-1/2 -translate-y-1/2">
+        <div class="flex justify-end">
+            <i class="remove bi bi-x-square-fill text-green-900 md:text-3xl text-2xl cursor-pointer"></i>
+        </div>
+        <!-- products Container  -->
+        <div class="h-full">
+
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/Home/im1.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">Key Holder for Wall, Decorative Key and Mail Holder with Shelf
+                                    Has Large Hooks for Bags, Coats, Umbrella – Paulownia Wood Key Hanger with Mounting
+                                    Hardware (9.8”W x 6.7”H x 4.2”D) </p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">25</h1>
+                                        <del class="relative left-2">30$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/Home/im2.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">Veken Adhesive Shower Caddy 6-Pack, Large Capacity Bathroom
+                                    Organizers and Storage, Rustproof Shelves Rack with Soap Holder, No Drilling
+                                    Wall-Mounted Kitchen & Home Decor, Bath Decor&Essentials, Black</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">35</h1>
+                                        <del class="relative left-2">50$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/Home/im3.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">Carrot's Den Donut Vase, Set of 2 - Minimalist Nordic, White
+                                    Ceramic Hollow Donut Vase Decor | Table Centerpiece, Olive Plant, Wedding, Living
+                                    Room, Bookshelf, Office, Modern Home, Entryway, Console</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">25</h1>
+                                        <del class="relative left-2">30$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- row2  -->
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/Home/im4.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">Miniature Frog Garden Statue Christmas Decorations Fairy Garden
+                                    Accessories Outdoor Figurine Lights Solar Garden Frog Decor Art Housewarming Gift
+                                    for Patio,Yard,Lawn Ornament,3.89"x2.36"x3.93" </p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">20</h1>
+                                        <del class="relative left-2">25$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/Home/im5.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">White Vases for Decor, Heart Shaped Ceramic Vase Set of 2,
+                                    Nordic Heart Shaped Vases, Minimalist Decorative Vase for Table Centerpiece Wedding
+                                    Dining Living Room Office House Decoration</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">25</h1>
+                                        <del class="relative left-2">30$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/Home/im6.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">Chuangdi 12 Pieces Miniature Dollhouse Plant Flowers Mini
+                                    Potted Plant Artificial Tiny Greenery Ornament Miniature Hanging Potted Plant Faux
+                                    Flower Model Dollhouse Decoration, 6 Types </p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">25</h1>
+                                        <del class="relative left-2">30$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row3  -->
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/Home/im7.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">38Pcs Doll House Christmas Decoration, Miniature Christmas
+                                    Dollhouse Accessories Fake Light Door Mini Xmas Tree 1:12 Miniature Scene Model
+                                    Pretend Toys DIY Festival Holiday Party Favors</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">39.99</h1>
+                                        <del class="relative left-2">50$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/Home/im8.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">4 Pack Acrylic Qtip Holder Dispenser for Cotton Swabs, Balls,
+                                    Pads, Floss Picks- Small Clear Plastic Canister Apothecary Jar Set, Bathroom
+                                    Essentials Accessories Decor, Vanity Makeup Storage Organizer</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">25</h1>
+                                        <del class="relative left-2">30$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/Home/im9.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">WEALD TRIBE Flower Reed Diffuser Set Eucalyptus & Lavender
+                                    Scent For Bathroom Accessories Shelf Decor & Air Fresheners, Sticks Defusers With
+                                    4.0 fl oz Essential Oils, House Bedroom Office Decor & Gift </p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">25</h1>
+                                        <del class="relative left-2">30$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <main id=""
+        class="flex-col gap-[2rem] Clothing overflow-scroll scroll-wi main p-4 hidden z-50 left-1/2 top-1/2 w-[100vw] h-[100vh] bg-slate-200 rounded-2xl transform -translate-x-1/2 -translate-y-1/2">
+        <div class="flex justify-end">
+            <i class="remove bi bi-x-square-fill text-green-900 md:text-3xl text-2xl cursor-pointer"></i>
+        </div>
+        <!-- products Container  -->
+        <div class="h-full">
+
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/cloths/im1.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">Legendary Whitetails Men's Navigator Fleece Button Up Shirt
+                                </p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="text-[2rem]">35</h1>
+                                        <del class="relative left-2">50$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/cloths/im2.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">Legendary Whitetails Men's Buck Camp Flannel, Long Sleeve Plaid
+                                    Button Down Casual Shirt, Corduroy Cuffs </p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">35</h1>
+                                        <del class="relative left-2">50$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/cloths/im3.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">Legendary Whitetails Men's Journeyman Shirt Jacket, Flannel
+                                    Lined Shacket for Men, Water-Resistant Coat Rugged Fall Clothing</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">45</h1>
+                                        <del class="relative left-2">60$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- row2  -->
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/cloths/im4.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">Men's Dress Shirt Stretch Formal Shirt Business Casual Cutaway
+                                    Collar Long Sleeve Convertible Cuffs Solid</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">20</h1>
+                                        <del class="relative left-2">30$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/cloths/im5.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">Gildan Men's Crew T-Shirts, Multipack, Style G1100 </p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">30</h1>
+                                        <del class="relative left-2">50$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/cloths/im6.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">COOFANDY Men's Linen Shirts Short Sleeve Casual Shirts Button
+                                    Down Shirt for Men Beach Summer Wedding Shirt </p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">65</h1>
+                                        <del class="relative left-2">80$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row3  -->
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/cloths/im7.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">5 Pack Men’s Active Quick Dry Crew Neck T Shirts | Athletic
+                                    Running Gym Workout Short Sleeve Tee Tops Bulk </p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">25</h1>
+                                        <del class="relative left-2">30$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/cloths/im8.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">MCPORO Workout Shirts for Men Short Sleeve Quick Dry Athletic
+                                    Gym Active T Shirt Moisture Wicking</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">25</h1>
+                                        <del class="relative left-2">30$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/cloths/im9.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">Champion Men's T-Shirt, Classic Graphic T-Shirt, Soft and
+                                    Comfortable T-Shirts for Men, Script Logo (Reg. or Big & Tall) </p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">55</h1>
+                                        <del class="relative left-2">60$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <main id=""
+        class="flex-col gap-[2rem] Mobiles overflow-scroll scroll-wi main p-4 hidden z-50 left-1/2 top-1/2 w-[100vw] h-[100vh] bg-slate-200 rounded-2xl transform -translate-x-1/2 -translate-y-1/2">
+        <div class="flex justify-end">
+            <i class="remove bi bi-x-square-fill text-green-900 md:text-3xl text-2xl cursor-pointer"></i>
+        </div>
+        <!-- products Container  -->
+        <div class="h-full">
+
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/mob/im1.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">SAMSUNG Galaxy A15 5G A Series Cell Phone, 128GB Unlocked
+                                    Android Smartphone, AMOLED Display, Expandable Storage, Knox Security, Super Fast
+                                    Charging, US Version, 2024, Blue Black</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">200</h1>
+                                        <del class="relative left-2">255$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/mob/im2.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400"> Moto G Play 2023 3-Day Battery Unlocked Made for US 3/32GB
+                                    16MP Camera Navy Blue</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">125</h1>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/mob/im3.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">Motorola Moto G Pure | 2021 | 2-Day battery | Unlocked | Made
+                                    for US by Motorola | 3/32GB | 13MP Camera | Deep Indigo</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">125</h1>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- row2  -->
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/mob/im4.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">Nokia 2780 Flip | Unlocked | KaiOS | Verizon, AT&T, T-Mobile |
+                                    Blue</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">45</h1>
+                                        <del class="relative left-2">60$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/mob/im5.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">DOOGEE Blade10 Pro Rugged Phone 6.56" HD+ 90Hz 16GB+256GB /TF
+                                    2TB, Android 14 Rugged Smartphone, 50MP + 8MP and 5150mAh, Rugged Cell Phone with
+                                    Dual 4G/NFC/Face </p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">225</h1>
+                                        <del class="relative left-2">300$</del>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/mob/im6.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">Overall Pick
+                                    SAMSUNG Galaxy S24 Ultra Cell Phone, 512GB AI Smartphone, Unlocked Android, 200MP,
+                                    100x Zoom Cameras, Long Battery Life, S...</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">300</h1>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row3  -->
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/mob/im7.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">OnePlus 12R, 16GB RAM+256GB, Dual-SIM, US Factory Unlocked
+                                    Android Smartphone, 5500 mAh Battery, 50MP Camera, 80W Fast Charging, 2024, Iron
+                                    Gray</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">300</h1>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/mob/im8.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">Google Pixel 8 - Unlocked Android Smartphone with Advanced
+                                    Pixel Camera, 24-Hour Battery, and Powerful Security - Obsidian - 128 GB</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">300</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/mob/im9.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">OnePlus Nord N30 5G | Unlocked Dual-SIM Android Smart Phone |
+                                    6.7" LCD Display | 8 +128GB | 5000 mAh Battery | 50W Fast Charging | 108MP Camera |
+                                    Chromatic Gray</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">300</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <main id=""
+        class="flex-col gap-[2rem] Furniture overflow-scroll scroll-wi main p-4 hidden z-50 left-1/2 top-1/2 w-[100vw] h-[100vh] bg-slate-200 rounded-2xl transform -translate-x-1/2 -translate-y-1/2">
+        <div class="flex justify-end">
+            <i class="remove bi bi-x-square-fill text-green-900 md:text-3xl text-2xl cursor-pointer"></i>
+        </div>
+        <!-- products Container  -->
+        <div class="h-full">
+
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/furn/im1.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">
+                                    This furniture combines style and comfort, crafted to elevate any space with its
+                                    modern design and quality materials. Built for durability and elegance, it
+                                    transforms your home into a welcoming retreat.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">75</h1>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/furn/im2.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">
+                                    This furniture combines style and comfort, crafted to elevate any space with its
+                                    modern design and quality materials. Built for durability and elegance, it
+                                    transforms your home into a welcoming retreat.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">75</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/furn/im3.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">
+                                    This furniture combines style and comfort, crafted to elevate any space with its
+                                    modern design and quality materials. Built for durability and elegance, it
+                                    transforms your home into a welcoming retreat.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">75</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- row2  -->
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/furn/im4.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">
+                                    This furniture combines style and comfort, crafted to elevate any space with its
+                                    modern design and quality materials. Built for durability and elegance, it
+                                    transforms your home into a welcoming retreat.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">75</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/furn/im5.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">
+                                    This furniture combines style and comfort, crafted to elevate any space with its
+                                    modern design and quality materials. Built for durability and elegance, it
+                                    transforms your home into a welcoming retreat.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">75</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/furn/im6.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">
+                                    This furniture combines style and comfort, crafted to elevate any space with its
+                                    modern design and quality materials. Built for durability and elegance, it
+                                    transforms your home into a welcoming retreat.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">125</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row3  -->
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/furn/im7.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">
+                                    This furniture combines style and comfort, crafted to elevate any space with its
+                                    modern design and quality materials. Built for durability and elegance, it
+                                    transforms your home into a welcoming retreat.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">125</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/furn/im8.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">
+                                    This furniture combines style and comfort, crafted to elevate any space with its
+                                    modern design and quality materials. Built for durability and elegance, it
+                                    transforms your home into a welcoming retreat.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">125</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[1rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/furn/im9.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">
+                                    This furniture combines style and comfort, crafted to elevate any space with its
+                                    modern design and quality materials. Built for durability and elegance, it
+                                    transforms your home into a welcoming retreat.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">125</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <main id=""
+        class="flex-col gap-[2rem] Laptops overflow-scroll scroll-wi main p-4 hidden z-50 left-1/2 top-1/2 w-[100vw] h-[100vh] bg-slate-200 rounded-2xl transform -translate-x-1/2 -translate-y-1/2">
+        <div class="flex justify-end">
+            <i class="remove bi bi-x-square-fill text-green-900 md:text-3xl text-2xl cursor-pointer"></i>
+        </div>
+        <!-- products Container  -->
+        <div class="h-full">
+
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/gaming/im1.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">
+                                    This gaming gear is crafted for peak performance, with responsive controls and
+                                    immersive sound that put you right in the heart of the action. Built to enhance
+                                    speed and precision, it gives you the edge you need to dominate every game</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">55</h1>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/gaming/im2.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">
+                                    This gaming gear is crafted for peak performance, with responsive controls and
+                                    immersive sound that put you right in the heart of the action. Built to enhance
+                                    speed and precision, it gives you the edge you need to dominate every game</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">105</h1>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/gaming/im3.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">
+                                    This gaming gear is crafted for peak performance, with responsive controls and
+                                    immersive sound that put you right in the heart of the action. Built to enhance
+                                    speed and precision, it gives you the edge you need to dominate every game</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">155</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- row2  -->
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/gaming/im4.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">
+                                    This gaming gear is crafted for peak performance, with responsive controls and
+                                    immersive sound that put you right in the heart of the action. Built to enhance
+                                    speed and precision, it gives you the edge you need to dominate every game</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">155</h1>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/gaming/im5.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">
+                                    This gaming gear is crafted for peak performance, with responsive controls and
+                                    immersive sound that put you right in the heart of the action. Built to enhance
+                                    speed and precision, it gives you the edge you need to dominate every game</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">155</h1>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/gaming/im6.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">
+                                    This gaming gear is crafted for peak performance, with responsive controls and
+                                    immersive sound that put you right in the heart of the action. Built to enhance
+                                    speed and precision, it gives you the edge you need to dominate every game</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">70</h1>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row3  -->
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/gaming/im7.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">
+                                    This gaming gear is crafted for peak performance, with responsive controls and
+                                    immersive sound that put you right in the heart of the action. Built to enhance
+                                    speed and precision, it gives you the edge you need to dominate every game</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">70</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/gaming/im8.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">
+                                    This gaming gear is crafted for peak performance, with responsive controls and
+                                    immersive sound that put you right in the heart of the action. Built to enhance
+                                    speed and precision, it gives you the edge you need to dominate every game</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">70</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/gaming/im9.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">
+                                    This gaming gear is crafted for peak performance, with responsive controls and
+                                    immersive sound that put you right in the heart of the action. Built to enhance
+                                    speed and precision, it gives you the edge you need to dominate every game</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">70</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <main id=""
+        class="flex-col gap-[2rem] Gaming overflow-scroll scroll-wi main p-4 hidden z-50 left-1/2 top-1/2 w-[100vw] h-[100vh] bg-slate-200 rounded-2xl transform -translate-x-1/2 -translate-y-1/2">
+        <div class="flex justify-end">
+            <i class="remove bi bi-x-square-fill text-green-900 md:text-3xl text-2xl cursor-pointer"></i>
+        </div>
+        <!-- products Container  -->
+        <div class="h-full">
+
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/lap/im1.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">This sleek laptop boasts a 14-inch Full HD display, powered by
+                                    an Intel i7 processor and 16GB RAM for seamless multitasking. With a 512GB SSD and
+                                    10-hour battery life, it's perfect for work and play on the go.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">270</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/lap/im2.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">This sleek laptop boasts a 14-inch Full HD display, powered by
+                                    an Intel i7 processor and 16GB RAM for seamless multitasking. With a 512GB SSD and
+                                    10-hour battery life, it's perfect for work and play on the go.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">210</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/lap/im3.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">This sleek laptop boasts a 14-inch Full HD display, powered by
+                                    an Intel i7 processor and 16GB RAM for seamless multitasking. With a 512GB SSD and
+                                    10-hour battery life, it's perfect for work and play on the go.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">300</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- row2  -->
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/lap/im4.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">This sleek laptop boasts a 14-inch Full HD display, powered by
+                                    an Intel i7 processor and 16GB RAM for seamless multitasking. With a 512GB SSD and
+                                    10-hour battery life, it's perfect for work and play on the go. </p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">100</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/lap/im5.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">This sleek laptop boasts a 14-inch Full HD display, powered by
+                                    an Intel i7 processor and 16GB RAM for seamless multitasking. With a 512GB SSD and
+                                    10-hour battery life, it's perfect for work and play on the go.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="text-[2rem]">30</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/lap/im6.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">This sleek laptop boasts a 14-inch Full HD display, powered by
+                                    an Intel i7 processor and 16GB RAM for seamless multitasking. With a 512GB SSD and
+                                    10-hour battery life, it's perfect for work and play on the go.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="text-[2rem]">225</h1>
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row3  -->
+            <div class="flex flex-wrap p-2 overflow-hidden justify-center gap-[2rem]">
+                <!-- card1 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/lap/im7.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">This sleek laptop boasts a 14-inch Full HD display, powered by
+                                    an Intel i7 processor and 16GB RAM for seamless multitasking. With a 512GB SSD and
+                                    10-hour battery life, it's perfect for work and play on the go.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="text-[2rem]">225</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/lap/im8.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[2rem]">
+                                <p class="text-gray-400">This sleek laptop boasts a 14-inch Full HD display, powered by
+                                    an Intel i7 processor and 16GB RAM for seamless multitasking. With a 512GB SSD and
+                                    10-hour battery life, it's perfect for work and play on the go.</p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">225</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card relative rounded-xl w-[400px] min-h-[600px] bg-slate-50 px-3 py-[2rem]">
+                    <div class="flex flex-col h-full gap-[1rem]">
+                        <div class="h-1/2 overflow-hidden flex justify-center items-center rounded-xl">
+                            <img src="../Images/products/lap/im9.jpg" alt="" class="">
+                        </div>
+                        <div class="flex h-full flex-col justify-between">
+                            <div class="flex flex-col  gap-[1rem]">
+                                <p class="text-gray-400">This sleek laptop boasts a 14-inch Full HD display, powered by
+                                    an Intel i7 processor and 16GB RAM for seamless multitasking. With a 512GB SSD and
+                                    10-hour battery life, it's perfect for work and play on the go. </p>
+                                <div class="flex gap-3 text-xl text-yellow-400">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <span>$</span>
+                                        <h1 class="price text-[2rem]">275</h1>
+
+                                    </div>
+                                    <div class="">
+                                        <button
+                                            class="voucher bg-slate-400 md:px-[1.9rem] px-[1rem] py-[0.5rem] rounded-3xl">Apply
+                                            Voucher</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <button class="bg-green-700 w-full py-[0.5rem] text-white rounded-md">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== Product option Complete ==========  -->
+    <!-- ========== Cart Start ==========  -->
+    <section id="cart" class="pt-[5rem] bg-slate-100 ps-6 pe-6 lg:ps-12 lg:pe-8">
+        <div id="cart" class="flex flex-col justify-center gap-[5rem] p-6 bg-slate-200 shadow-sm rounded-lg"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="flex justify-center">
+                <i class="bi bi-basket-fill text-[4rem] text-green-800"></i>
+            </div>
+            <div class="">
+                <ul class="list flex flex-col gap-[2rem]">
+                </ul>
+            </div>
+            <div class="flex flex-col gap-[3rem]">
+                <div class="total-div text-center flex items-center justify-between gap-[2.4rem]">
+
+                </div>
+                <div class="hidden order-div justify-center">
+                    <button class="order bg-green-700 w-[400px] h-[42px] rounded-xl text-white">Order</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== Cart End ==========  -->
+
+
+    <!-- ========== Order Section Start ==========  -->
+    <section id="location"
+        class="hidden bg-white z-50 left-1/2 top-0 w-[100vw] h-[calc(100vh)] rounded-2xl transform -translate-x-1/2 overflow-y-auto">
+        <!-- Navbar Section -->
+        <div class="flex px-4 h-[10vh] items-center bg-white" style="border-bottom: 6px solid green;">
+            <i id="goback" class="bi bi-arrow-left cursor-pointer text-2xl"></i>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex lg:flex-row flex-col-reverse px-12 py-7 gap-4">
+            <!-- Input Section -->
+            <div class="flex flex-col justify-center w-full lg:w-1/2">
+                <form class="flex flex-col gap-6 items-center relative">
+                    <input id="readonlyInput" class="bg-slate-200 px-4 py-3 rounded-md w-full outline-none" type="text"
+                        readonly placeholder="Selected Location" required>
+                    <input class="bg-slate-200 px-4 py-3 rounded-md w-full outline-none" type="text"
+                        placeholder="Enter Your Local Address" required>
+                    <div class="final-div w-full flex justify-between items-center">
+                        <button type="button" id="finalorder"
+                            class="bg-green-700 px-6 py-2 rounded-md text-white text-lg hover:bg-green-600">
+                            Order
+                        </button>
+                        <span class="finaltotal"></span>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Map Section -->
+            <div class="w-full lg:w-1/2 flex flex-col items-center justify-center">
+                <form class="flex gap-4 items-center w-full">
+                    <input id="locationInput" class="bg-slate-200 px-4 py-3 rounded-md w-full outline-green-700"
+                        type="text" placeholder="Enter Your Location">
+                    <button type="button" id="searchButton"
+                        class="bg-green-700 px-4 py-2 rounded-md text-white hover:bg-green-600">
+                        Enter
+                    </button>
+                </form>
+                <div id="map" class="w-full h-[300px] rounded-md mt-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== order Section End ==========  -->
+
+
+
+    <!-- ========== About Start ==========  -->
+    <section id="about"
+        class="flex flex-col gap-[1.9rem] items-center bg-slate-100 pt-[5rem] pb-[5rem] ps-6 pe-6 lg:ps-12 lg:pe-8">
+        <h2 class="abouthead headf md:text-[4rem] text-[2.5rem] text-center text-gray-700"></h2>
+        <details id="aboutDetails" class="flex flex-col gap-[2rem] text-[2rem] text-gray-700 text-center">
+            <summary class="relative top-[-15px]"></summary>
+            <p class="typed-output text-[18px] text-gray-500 md:leading-10 leading-8 md:px-[4rem]"></p>
+        </details>
+
+    </section>
+    <!-- ========== About End ==========  -->
+
+    <!-- Js Link  -->
+    <script src="./src/aos/dist/aos.js"></script>
+    <script src="./script.js"></script>
+    <script type="module" src="../Javascript/modules.js"></script>
+    <script src="../Javascript/formstore.js"></script>
+    <script src="../Javascript/form.js"></script>
+    <script src="../Javascript/script2.js"></script>
+
+
+</body>
+
+</html>

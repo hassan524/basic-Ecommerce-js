@@ -1,0 +1,68 @@
+/* Roboto Regular */
+
+
+@font-face {
+    font-family: "RobotoRegular";
+    src: url("../Fonts Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+/* Roboto Bold */
+@font-face {
+    font-family: "RobotoBold";
+    src: url("../Fonts Roboto/Roboto-Bold.ttf") format("truetype");
+}
+
+/* Roboto Italic */
+@font-face {
+    font-family: "RobotoItalic";
+    src: url("../Fonts Roboto/Roboto-Italic.ttf") format("truetype");
+}
+
+/* Roboto Bold Italic */
+@font-face {
+    font-family: "RobotoBoldItalic";
+    src: url("../Fonts Roboto/Roboto-BoldItalic.ttf") format("truetype");
+}
+
+/* Apply the fonts in CSS classes */
+
+/* Main text uses Roboto Regular */
+.mainRoboto {
+    font-family: "RobotoRegular", sans-serif;
+}
+
+/* Headings use Roboto Bold */
+.headingRoboto{
+    font-family: "RobotoBold", sans-serif;
+}
+
+/* Italic text uses Roboto Italic */
+.italicRoboto {
+    font-family: "RobotoItalic", sans-serif;
+}
+
+/* Buttons use Roboto Bold Italic */
+.btnRoboto {
+    font-family: "RobotoBoldItalic", sans-serif;
+}
+input:-webkit-autofill {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    color: inherit !important;
+  }
+  
+  input:-moz-autofill {
+    background-color: transparent !important;
+    box-shadow: 0 0 0px 1000px white inset !important;
+    color: inherit !important;
+  }
+
+  .custom-delay {
+    animation-delay: 0.3s;
+  }
+
+
+  :root{
+    --main-color: #278748;
+    --other-color: #4ce581;
+  }
