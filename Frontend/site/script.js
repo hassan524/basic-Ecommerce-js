@@ -11,6 +11,7 @@ document.querySelector(".rem-nav").addEventListener("click", () => {
 })
 
 const username = localStorage.getItem('Username');
+
 const typed1 = new Typed('.welc', {
     strings: [
         `Welcome to EStore <span class="highlight">${username}</span>`,
